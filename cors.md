@@ -14,12 +14,13 @@
     
 ## 전역설정
 
-   @Configuration
-   public class WebConfig implements WebMvcConfigurer {
+    @Configuration
+    public class WebConfig implements WebMvcConfigurer {
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").allowedOrigins("http://localhost:18080");
     }
-}
+    }
 
 해당 클래스처럼 설정파일을만들어서 addCorsMappings만 오버라이드 ( 다른설정들은 그냥사용하면서 이거만바꾸는것)
